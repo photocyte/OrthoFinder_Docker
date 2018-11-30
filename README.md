@@ -7,5 +7,5 @@ docker build -t orthofinder_docker .
 #wget https://github.com/photocyte/ILUMI_OGS/raw/master/ILUMI_OGS1.2.pep.fa.gz
 #gunzip ./*
 #cd ..
-docker run -it --mount type=bind,source="$(pwd)"/working,target=/home/working/20181113_peptide_files/ -w /home/working/20181113_peptide_files/ orthofinder_docker python2 /usr/src/OrthoFinder/orthofinder/orthofinder.py -f . -t 4 -S blast -M msa -A kalign -T iqtree
+docker run -it --mount type=bind,source="$(pwd)"/working,target=/home/working/20181113_peptide_files/ -w /home/working/20181113_peptide_files/ orthofinder_docker python2 /usr/src/OrthoFinder/orthofinder/orthofinder.py -f . -a 4 -t 4 -S blast -M msa -A kalign -T iqtree
 
